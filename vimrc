@@ -74,8 +74,9 @@ Bundle 'tComment'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
-filetype plugin indent on " Required
-
+filetype on
+filetype plugin on
+filetype indent on
 
 " Projects
 command Settings :e project.vim
