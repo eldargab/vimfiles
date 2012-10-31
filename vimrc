@@ -13,9 +13,11 @@ set hidden " hide on unsaved changes
 set autoread
 set ignorecase
 set smartcase
+set incsearch
+set nohlsearch
 set encoding=utf8
-set showmatch
 set showcmd
+set complete=i,t
 
 " Store swap files in one place
 set directory=~/.local/tmp
@@ -25,12 +27,6 @@ set guicursor=a:blinkon0
 set novisualbell              " No blinking
 set noerrorbells              " No noise.
 set vb t_vb=                  " disable any beeps or flashes on error
-
-set wildmode=longest,list " At command line, complete longest common string, then list alternatives.
-
-" Better search
-set incsearch
-set nohlsearch
 
 if has("gui_macvim")
   set guifont=Menlo:h13
@@ -44,6 +40,8 @@ filetype off " Required
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
+
+Bundle 'pangloss/vim-javascript'
 
 Bundle 'Command-T'
 let g:CommandTMatchWindowAtTop=1
@@ -74,21 +72,25 @@ Bundle 'tComment'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+
 filetype on
 filetype plugin on
 filetype indent on
 
 " Projects
-command Settings :e project.vim
+command! Settings :e project.vim
 au BufWritePost project.vim :so %
 
 " Shortcut commands
-command Vimrc :e ~/.vim/vimrc
-command Gvimrc :e ~/.vim/gvimrc
-command Vimfiles :e ~/.vim/bundle
-command Snippets :e ~/.vim/snippets
-command Script :e ~/dev/scripts
-command Profile :e ~/.profile
+command! Vimrc :e ~/.vim/vimrc
+command! Gvimrc :e ~/.vim/gvimrc
+command! Vimfiles :e ~/.vim/bundle
+command! Snippets :e ~/.vim/snippets
+command! Colors :e ~/.vim/colors/my.vim
+command! Script :e ~/dev/scripts
+command! Profile :e ~/.profile
 imap ;l <Esc>
 
 "Some Sublime bindings
@@ -102,8 +104,7 @@ function! CleverTab()
    else
       return "\<C-N>"
 endfunction
-inoremap <Tab> <C-R>=CleverTab()<CR>
-
+imap <Tab> <C-R>=CleverTab()<CR>
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
