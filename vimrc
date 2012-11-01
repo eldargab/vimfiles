@@ -63,6 +63,9 @@ let g:NERDTreeWinSize=40
 let g:NERDTreeMapHelp='??'
 map <F4> :NERDTreeToggle<CR>
 
+Bundle 'grep.vim'
+Bundle 'ervandew/supertab'
+
 " Git integration
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
@@ -86,7 +89,7 @@ au BufWritePost project.vim :so %
 " Shortcut commands
 command! Vimrc :e ~/.vim/vimrc
 command! Gvimrc :e ~/.vim/gvimrc
-command! Vimfiles :e ~/.vim/bundle
+command! Vimfiles :!project ~/.vim/bundle
 command! Snippets :e ~/.vim/snippets
 command! Colors :e ~/.vim/colors/my.vim
 command! Script :e ~/dev/scripts
@@ -96,15 +99,6 @@ imap ;l <Esc>
 "Some Sublime bindings
 imap <C-Enter> <Esc>o
 imap <C-S-Enter> <Esc>O
-
-
-function! CleverTab()
-   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-      return "\<Tab>"
-   else
-      return "\<C-N>"
-endfunction
-imap <Tab> <C-R>=CleverTab()<CR>
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
