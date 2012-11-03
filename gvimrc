@@ -1,1 +1,1 @@
-" colorscheme my
+colorscheme my
