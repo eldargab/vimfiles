@@ -5,14 +5,14 @@ hi String gui=NONE guifg=#a31515
 
 hi javaScriptRegexpString gui=NONE guifg=#009926
 
-hi javaScriptStatement gui=bold guifg=#333333
-hi javaScriptFunction gui=bold guifg=#333333
-hi javaScriptRepeat gui=bold guifg=#333333
-hi javaScriptBranch gui=bold guifg=#333333
-hi javaScriptConditional gui=bold guifg=#333333
-hi javaScriptType gui=bold guifg=#333333
-hi javaScriptThis gui=bold guifg=#333333
-hi javaScriptOperator gui=bold guifg=#333333
+hi javaScriptStatement gui=NONE guifg=#2060A0
+hi javaScriptFunction gui=NONE guifg=#2060A0
+hi javaScriptRepeat gui=NONE guifg=#2060A0
+hi javaScriptBranch gui=NONE guifg=#2060A0
+hi javaScriptConditional gui=NONE guifg=#2060A0
+hi javaScriptType gui=NONE guifg=#2060A0
+hi javaScriptThis gui=NONE guifg=#2060A0
+hi javaScriptOperator gui=NONE guifg=#2060A0
 
 hi javaScriptBoolean gui=NONE  guifg=#008080
 hi javaScriptNull gui=NONE  guifg=#008080
