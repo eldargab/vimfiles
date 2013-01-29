@@ -37,3 +37,13 @@ hi htmlTag gui=NONE guifg=navy
 hi htmlEndTag gui=NONE guifg=navy
 hi htmlTitle gui=NONE guifg=#333333
 
+
+hi hsStructure gui=NONE guifg=#2060A0
+hi hsStatement gui=NONE guifg=#2060A0
+hi hsTypedef gui=NONE guifg=#2060A0
+hi hsConditional gui=NONE guifg=#2060A0
+hi hsInfix gui=NONE guifg=#2060A0
+
+hi hsType gui=NONE guifg=#008080
+hi hsOperator gui=bold guifg=#333333
+

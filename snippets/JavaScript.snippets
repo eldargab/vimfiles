@@ -12,3 +12,8 @@ snippet it
 	})
 snippet INH
 	prototype = Object.create(${1:Parent}.${2:prototype})
+snippet forin
+	for (var key in ${1:obj}) {
+	}
+snippet iferr
+	if (err) return ${1:cb}(err)

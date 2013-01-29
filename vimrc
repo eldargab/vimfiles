@@ -28,9 +28,13 @@ set novisualbell              " No blinking
 set noerrorbells              " No noise.
 set vb t_vb=                  " disable any beeps or flashes on error
 
+set linespace=3
 if has("gui_macvim")
   set guifont=Menlo:h13
 end
+
+let hs_highlight_types = 1
+let hs_highlight_more_types = 1
 
 syntax on
 
@@ -42,6 +46,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'pangloss/vim-javascript'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'wavded/vim-stylus'
 
 Bundle 'Command-T'
 let g:CommandTMatchWindowAtTop=1
@@ -77,6 +83,9 @@ vnoremap // :TComment<CR>
 
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+
+let g:haddock_browser="/Applications/Google Chrome.app"
+Bundle 'lukerandall/haskellmode-vim'
 
 filetype on
 filetype plugin on
